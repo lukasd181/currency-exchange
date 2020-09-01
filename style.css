@@ -1,0 +1,11 @@
+
+.main-area {
+    display:flex;
+    flex-direction: column;
+}
+
+.main-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

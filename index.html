@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Exchange Program</h1>
+    <section class="container main-area">
+      <div class="main-items">
+        <div class="form-group page-item input-amount">
+          <label for="input-amount">Enter the amount here</label>
+          <input type="number" id="input-amount" />
+        </div>
+
+        <div class="page-item from-currency">
+          <label for="drop-From">From:</label>
+          <select name="drop-From" id="drop-From">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+          </select>
+        </div>
+
+        <div class="page-item reverse-button">
+          <button
+            type="button"
+            id="reverse-button"
+            onclick="reverseCurrencyExchange()"
+          >
+            Reverse
+          </button>
+        </div>
+
+        <div class="page-item to-currency">
+          <label for="drop-To">To:</label>
+          <select name="drop-To" id="drop-To">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+          </select>
+        </div>
+
+        <div class="page-item convert-button">
+          <button id="con-but" onclick="currencyExchange()">Convert</button>
+        </div>
+      </div>
+
+      <div class="convert-result">
+        <h1 id="text-result" class="text-center"></h1>
+      </div>
+    </section>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
